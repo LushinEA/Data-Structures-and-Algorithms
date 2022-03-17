@@ -1,0 +1,15 @@
+file = open('../Lab4_text/8_text.txt', encoding='utf-8')
+stack = []
+for line in file:
+    stack.append(line)
+file.close()
+    
+text =""
+while len(stack) != 0:
+    text = text + stack.pop()
+
+file_res = open('../Lab4_text/8_answer.txt', 'w', encoding='utf-8')
+file_res.write(text)
+file_res.close()
+
+print(text)
